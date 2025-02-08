@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>company_name - New User Registration</title>
+</head>
+
+<body>
+  <nav></nav>
+  <main>
+    <form id="accountCreationForm" aria-labelledby="formTitle" aria-describedby="formInstructions" novalidate>
+      <div id="userInfo">
+        <h2>User Information</h2>
+        <div id="inputFieldGroup">
+          <div class="inputField">
+            <label for="firstName" class="sr-only">First Name</label>
+            <input type="text" id="firstName" name="firstName" required aria-required="true"
+              aria-describedby="firstNameHelp" placeholder="First Name">
+          </div>
+          <div class="inputField">
+            <label for="lastName" class="sr-only">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required aria-required="true"
+              aria-describedby="lastNameHelp" placeholder="Last Name">
+          </div>
+        </div>
+
+        <div class="inputField">
+          <label for="email" class="sr-only">Email Address</label>
+          <input type="email" id="email" name="email" required aria-required="true" aria-describedby="emailHelp"
+            placeholder="Email Address">
+        </div>
+        <div class="inputFieldGroup">
+          <div class="inputField">
+            <label for="birthMonth" class="sr-only">Birth Month</label>
+            <input type="number" id="birthMonth" name="birthMonth" required aria-required="true"
+              aria-describedby="birthMonthHelp" placeholder="Birth Month" min="1" max="12" required>
+          </div>
+          <div class="inputField">
+            <label for="birthYear" class="sr-only">Birth Year</label>
+            <input type="number" id="birthYear" name="birthYear" required aria-required="true"
+              aria-describedby="birthYearHelp" placeholder="Birth Year" min="1900" max="2005" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Section -->
+      <div id="accountInfo">
+        <h2>Account Information</h2>
+        <div class="inputField">
+          <label for="username" class="sr-only">Username</label>
+          <input type="text" id="username" name="username" required aria-required="true" placeholder="Username">
+        </div>
+        <div class="inputField">
+          <label for="password" class="sr-only">Password</label>
+          <input type="password" id="password" name="password" required aria-required="true"
+            aria-describedby="passwordHelp" placeholder="Password">
+          <small id="passwordHelp">Your password must be at least 8 characters long.</small>
+        </div>
+        <div class="tooltip" id="passwordTooltip">
+          <p>Password must contain:</p>
+          <ul>
+            <li>At least <i>one</i> Uppercase & Lowercase letter</li>
+            <li>At least <i>one</i> Number & Special Character</li>
+          </ul>
+        </div>
+        <div class="inputField">
+          <label for="confirmPassword" class="sr-only">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required aria-required="true"
+            aria-describedby="confirmPasswordHelp" placeholder="Confirm Password">
+          <small id="confirmPasswordHelp">Re-enter your password to confirm it.</small>
+        </div>
+      </div>
+      <button type="submit" aria-label="Create Account">Create Account</button>
+    </form>
+  </main>
+  <footer></footer>
+  <script src="/js/usernameSuggestions.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>
