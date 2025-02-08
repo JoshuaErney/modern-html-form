@@ -55,6 +55,7 @@ h2 {
   color: black;
   margin-bottom: 0.5rem;
 }
+
 ul {
   list-style-type: disc;
   padding: 0;
@@ -147,7 +148,7 @@ button:active {
   display: block;
 }
 
-.inputField:focus-within + .tooltip {
+.inputField:focus-within+.tooltip {
   display: block;
   opacity: 1;
 }
